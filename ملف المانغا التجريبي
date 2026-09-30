@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقع المانجا والأنمي المفضل</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --primary: #38bdf8;
+            --accent: #f43f5e;
+            --text: #f8fafc;
+            --text-muted: #94a3b8;
+        }
+        body {
+            font-family: Tahoma, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text);
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .header {
+            background: linear-gradient(135deg, #0284c7, #0369a1);
+            padding: 25px;
+            border-radius: 16px;
+            text-align: center;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+        }
+        .header h1 {
+            margin: 0 0 10px 0;
+            font-size: 22px;
+        }
+        .header p {
+            margin: 0;
+            font-size: 14px;
+            color: #e2e8f0;
+        }
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 18px;
+            margin-bottom: 15px;
+            border: 1px solid #334155;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+        .manga-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+        .manga-info {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        .badge {
+            display: inline-block;
+            background-color: var(--accent);
+            color: white;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- ترويحة الموقع (يمكنك تخصيصها باسم الزبون) -->
+        <div class="header">
+            <h1>⛩️ قائمة مانجا وأنمي المفضلة</h1>
+            <p>مرحباً بك في صفحتي الشخصية لاستعراض أفضل الأعمال وتقييماتي لها.</p>
+        </div>
+
+        <!-- العمل الأول -->
+        <div class="card">
+            <div class="manga-title">01. ون بيس (One Piece)</div>
+            <div class="manga-info">التصنيف: مغامرات، أكشن، خيال.<br>التقييم الشخصي: ⭐⭐⭐⭐⭐ (مستمر)</div>
+            <span class="badge">الأنمي المفضل</span>
+        </div>
+
+        <!-- العمل الثاني -->
+        <div class="card">
+            <div class="manga-title">02. جوجوتسو كايسن (Jujutsu Kaisen)</div>
+            <div class="manga-info">التصنيف: أكشن، خارق للطبيعة، مظلم.<br>التقييم الشخصي: ⭐⭐⭐⭐⭐ (مكتمل)</div>
+            <span class="badge">مانجا مفضلة</span>
+        </div>
+
+        <!-- العمل الثالث -->
+        <div class="card">
+            <div class="manga-title">03. قاتل الشياطين (Demon Slayer)</div>
+            <div class="manga-info">التصنيف: تاريخي، أكشن، قتال بالسيوف.<br>التقييم الشخصي: ⭐⭐⭐⭐☆ (مكتمل)</div>
+            <span class="badge">موصى به بشدة</span>
+        </div>
+    </div>
+
+</body>
+</html>
