@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>داشا - Dasha</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #faf5f5;
+            color: #4a4a4a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            text-align: center;
+            background: #ffffff;
+            padding: 40px 20px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            max-width: 400px;
+            width: 85%;
+        }
+        .logo {
+            font-size: 2.8rem;
+            font-weight: bold;
+            color: #d63384;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        .heart {
+            color: #e63946;
+            font-size: 2.4rem;
+            animation: pulse 1.5s infinite;
+        }
+        p {
+            font-size: 1.1rem;
+            color: #6c757d;
+            margin-top: 15px;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.15); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <span>داشا</span>
+            <span class="heart">♥</span>
+        </div>
+        <p>مرحباً بكم في مساحتنا الخاصة</p>
+    </div>
+</body>
+</html>
+
+
