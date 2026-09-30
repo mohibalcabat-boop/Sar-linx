@@ -1,0 +1,214 @@
+mkdir -p sarlinx_site && cd 
+sarlinx_site cat << 'EOF' > 
+index.html <!DOCTYPE html> <html 
+lang="ar" dir="rtl"> <head>
+    <meta charset="UTF-8"> <meta 
+    name="viewport" 
+    content="width=device-width, 
+    initial-scale=1.0"> 
+    <title>sar_linx - متجر 
+    الخدمات الرقمية</title> 
+    <style>
+        * { box-sizing: 
+        border-box; margin: 0; 
+        padding: 0; } body {
+            font-family: 'Segoe 
+            UI', Tahoma, Geneva, 
+            Verdana, sans-serif; 
+            background-color: 
+            #0b0f19;
+            color: #e2e8f0; 
+            padding: 20px; 
+            line-height: 1.6;
+        }
+        .header-card { 
+            background: 
+            linear-gradient(135deg, 
+            #0284c7 0%, #0369a1 
+            100%); border-radius: 
+            16px; padding: 25px; 
+            text-align: center; 
+            margin-bottom: 30px; 
+            box-shadow: 0 10px 
+            25px rgba(2, 132, 
+            199, 0.2);
+        }
+        .store-name { font-size: 
+            2.2rem; font-weight: 
+            bold; color: #ffffff; 
+            letter-spacing: 1px; 
+            margin-bottom: 5px;
+        }
+        .dev-info { font-size: 
+            1.1rem; color: 
+            #e0f2fe;
+            margin-bottom: 12px;
+        }
+        .about-box { background: 
+            rgba(255, 255, 255, 
+            0.1); border-radius: 
+            10px; padding: 12px 
+            18px; font-size: 
+            0.95rem; color: 
+            #f0f9ff;
+            max-width: 700px; 
+            margin: 0 auto;
+        }
+        .grid { display: grid; 
+            grid-template-columns: 
+            repeat(auto-fit, 
+            minmax(260px, 1fr)); 
+            gap: 18px; max-width: 
+            1100px; margin: 0 
+            auto;
+        }
+        .card { background: 
+            #1e293b;
+            border: 1px solid 
+            #334155;
+            border-radius: 12px; 
+            padding: 18px; 
+            display: flex; 
+            flex-direction: 
+            column; 
+            justify-content: 
+            space-between; 
+            transition: transform 
+            0.2s, border-color 
+            0.2s;
+        }
+        .card:hover { transform: 
+            translateY(-4px); 
+            border-color: 
+            #38bdf8;
+        }
+        .card-title { color: 
+            #f8fafc;
+            font-size: 1.1rem; 
+            margin-bottom: 8px;
+        }
+        .card-desc { color: 
+            #94a3b8;
+            font-size: 0.9rem; 
+            margin-bottom: 15px;
+        }
+        .card-footer { display: 
+            flex; 
+            justify-content: 
+            space-between; 
+            align-items: center; 
+            border-top: 1px solid 
+            #334155;
+            padding-top: 10px;
+        }
+        .price-tag { background: 
+            #166534;
+            color: #4ade80; 
+            padding: 4px 10px; 
+            border-radius: 6px; 
+            font-weight: bold; 
+            font-size: 0.95rem;
+        }
+        .site-id { color: 
+            #64748b;
+            font-size: 0.85rem; 
+            font-weight: bold;
+        }
+    </style> </head> <body> <div 
+    class="header-card">
+        <div 
+        class="store-name">🚀 
+        sar_linx</div> <div 
+        class="dev-info">المطور: 
+        <strong>ماهر عامر محمد 
+        نور</strong> | الشعبة: 
+        201</div> <div 
+        class="about-box">
+            مشروع تقني لإنشاء 
+            وتصميم مواقع وسكربتات 
+            تفاعلية مخصصة لكل 
+            طالب حسب الطلب خلال 
+            دقائق معدودة.
+        </div> </div> <div 
+    class="grid">
+        <div class="card"> <div> 
+                <div 
+                class="site-id">موقع 
+                #01</div>
+                <div 
+                class="card-title">موقع 
+                المانغا والأنمي 
+                المفضل</div> <div 
+                class="card-desc">عرض 
+                أفضل المانغات 
+                والأنميات 
+                وتقييماتك الشخصية 
+                لها.</div>
+            </div> <div 
+            class="card-footer"><span 
+            class="price-tag">3 
+            ريال</span></div>
+        </div> <div class="card"> 
+            <div>
+                <div 
+                class="site-id">موقع 
+                #02</div>
+                <div 
+                class="card-title">موقع 
+                معرض الصور 
+                والفيديوهات</div> 
+                <div 
+                class="card-desc">مساحة 
+                لاستعراض المقاطع 
+                والصور المفضلة 
+                بشكل منظم.</div>
+            </div> <div 
+            class="card-footer"><span 
+            class="price-tag">3 
+            ريال</span></div>
+        </div> <div class="card"> 
+            <div>
+                <div 
+                class="site-id">موقع 
+                #03</div>
+                <div 
+                class="card-title">الموقع 
+                العشوائي (Facts 
+                Generator)</div> 
+                <div 
+                class="card-desc">مولد 
+                حقائق واقتباسات 
+                تفاعلي غريب 
+                وممتع.</div>
+            </div> <div 
+            class="card-footer"><span 
+            class="price-tag">3 
+            ريال</span></div>
+        </div> <div class="card"> 
+            <div>
+                <div 
+                class="site-id">موقع 
+                #04</div>
+                <div 
+                class="card-title">موقع 
+                الاختبار الذهني 
+                والتفاعلي</div> 
+                <div 
+                class="card-desc">اختبار 
+                ذكاء وتحليل شخصية 
+                مخصص باسمك.</div>
+            </div> <div 
+            class="card-footer"><span 
+            class="price-tag">3 
+            ريال</span></div>
+        </div> <div class="card"> 
+            <div>
+                <div 
+                class="site-id">موقع 
+                #05</div>
+                <div 
+                class="card-title">موقع 
+                شرح البرمجة 
+                (Terminal 
+                Explainer)</div>
+                <div class="card-desc">واجهة هكر تفاع
