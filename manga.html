@@ -1,0 +1,205 @@
+<!DOCTYPE html> <html lang="ar" 
+dir="rtl"> <head>
+    <meta charset="UTF-8"> <meta 
+    name="viewport" 
+    content="width=device-width, 
+    initial-scale=1.0"> 
+    <title>موقع المانجا والأنمي 
+    المفضل</title> <style>
+        :root {
+            --bg-color: #0f172a; 
+            --card-bg: #1e293b; 
+            --primary: #38bdf8; 
+            --accent: #f43f5e; 
+            --text: #f8fafc; 
+            --text-muted: 
+            #94a3b8;
+        }
+        body { font-family: 
+            Tahoma, sans-serif; 
+            background-color: 
+            var(--bg-color); 
+            color: var(--text); 
+            margin: 0; padding: 
+            20px;
+        }
+        .container { max-width: 
+            600px; margin: 0 
+            auto;
+        }
+        header { background: 
+            linear-gradient(135deg, 
+            #0284c7, #0369a1);
+            padding: 20px; 
+            border-radius: 14px; 
+            text-align: center; 
+            box-shadow: 0 4px 
+            15px rgba(0,0,0,0.4); 
+            margin-bottom: 20px;
+        }
+        header h1 { margin: 0 0 
+        8px 0; font-size: 22px; } 
+        header p { margin: 0; 
+        font-size: 14px; color: 
+        #e0f2fe; }
+        .client-badge { display: 
+            inline-block; 
+            background: 
+            rgba(0,0,0,0.25); 
+            padding: 4px 12px; 
+            border-radius: 20px; 
+            font-size: 13px; 
+            margin-top: 10px; 
+            color: #fde047;
+        }
+        .form-card, .list-card { 
+            background: 
+            var(--card-bg); 
+            border-radius: 12px; 
+            padding: 15px; 
+            margin-bottom: 15px; 
+            border: 1px solid 
+            #334155;
+        }
+        input, select, button { 
+            width: 100%; padding: 
+            10px; margin-top: 
+            8px; margin-bottom: 
+            12px; border-radius: 
+            8px; border: 1px 
+            solid #475569; 
+            background: #0f172a; 
+            color: var(--text); 
+            font-size: 14px; 
+            box-sizing: 
+            border-box;
+        }
+        button { background: 
+            #059669;
+            color: white; border: 
+            none; font-weight: 
+            bold; cursor: 
+            pointer; transition: 
+            background 0.2s;
+        }
+        button:hover { 
+        background: #047857; } 
+        .anime-item {
+            background: #0f172a; 
+            padding: 12px; 
+            border-radius: 8px; 
+            margin-bottom: 10px; 
+            display: flex; 
+            justify-content: 
+            space-between; 
+            align-items: center; 
+            border-left: 4px 
+            solid var(--primary);
+        }
+        .anime-info h4 { margin: 
+        0 0 5px 0; font-size: 
+        15px; color: 
+        var(--primary); } 
+        .anime-info p { margin: 
+        0; font-size: 12px; 
+        color: var(--text-muted); 
+        }
+        .delete-btn { background: 
+            var(--accent); color: 
+            white; border: none; 
+            padding: 6px 10px; 
+            border-radius: 6px; 
+            cursor: pointer; 
+            font-size: 12px; 
+            width: auto; margin: 
+            0;
+        }
+        .footer { text-align: 
+        center; font-size: 12px; 
+        color: var(--text-muted); 
+        margin-top: 30px; }
+    </style> </head> <body> <div 
+    class="container">
+        <header> <h1>🎌 قائمة 
+            الأنمي والمانجا 
+            المفضلة</h1> <p>موقع 
+            تفاعلي مخصص</p> <div 
+            class="client-badge" 
+            id="clientNameDisplay">مملوكة 
+            لـ: جاري 
+            التحميل...</div>
+        </header> <!-- لوحة إضافة 
+        أنمي جديد --> <div 
+        class="form-card">
+            <h3>إضافة أنمي أو 
+            مانجا جديدة</h3> 
+            <input type="text" 
+            id="animeTitle" 
+            placeholder="اسم 
+            الأنمي أو المانجا 
+            (مثال: Naruto)"> 
+            <select 
+            id="animeType">
+                <option 
+                value="أنمي 
+                📺">أنمي 
+                📺</option> 
+                <option 
+                value="مانجا 
+                📖">مانجا 
+                📖</option>
+            </select> <select 
+            id="animeRating">
+                <option 
+                value="⭐⭐⭐⭐⭐ 
+                (أسطوري)">⭐⭐⭐⭐⭐ 
+                (أسطوري)</option> 
+                <option 
+                value="⭐⭐⭐⭐ 
+                (ممتاز)">⭐⭐⭐⭐ 
+                (ممتاز)</option> 
+                <option 
+                value="⭐⭐⭐ 
+                (جيد)">⭐⭐⭐ 
+                (جيد)</option>
+            </select> <button 
+            onclick="addAnime()">إضافة 
+            للقائمة</button>
+        </div> <!-- قائمة العرض 
+        --> <div 
+        class="list-card">
+            <h3>قائمتي 
+            المحفوظة</h3> <div 
+            id="animeList">
+                <!-- سيتم إدراج 
+                الأنميات هنا 
+                تفاعلياً -->
+            </div> </div> <div 
+        class="footer">
+            تم التطوير بواسطة 
+            sar_linx 🚀
+        </div> </div> <script>
+        // قراءة اسم العميل من 
+        // رابط الموقع (مثلاً: 
+        // ?name=سلطان)
+        const urlParams = new 
+        URLSearchParams(window.location.search); 
+        const clientName = 
+        urlParams.get('name') || 
+        'العميل المميز'; 
+        document.getElementById('clientNameDisplay').innerText 
+        = 'مملوكة لـ: ' + 
+        clientName;
+        // نظام تخزين الأنميات 
+        // تفاعلياً
+        let animes = 
+        JSON.parse(localStorage.getItem('sar_linx_mangas_' 
+        + clientName)) || [
+            { title: 'Attack on 
+            Titan', type: 'أنمي 
+            📺', rating: 
+            '⭐⭐⭐⭐⭐ (أسطوري)' 
+            }
+        ]; function 
+        renderAnimes() {
+            const listCo
